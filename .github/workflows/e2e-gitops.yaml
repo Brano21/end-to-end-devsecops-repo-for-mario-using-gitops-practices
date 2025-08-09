@@ -36,6 +36,7 @@ jobs:
         run: |
           VERSION=$(cat version.txt)
           NEW_VERSION=$((VERSION + 1))
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
   
   build_and_push_image:
     name: Build and push supermario image
